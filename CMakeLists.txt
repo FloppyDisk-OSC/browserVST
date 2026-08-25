@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 project(BrowserVST VERSION 1.0.0)
+
 add_subdirectory(JUCE ${CMAKE_CURRENT_BINARY_DIR}/JUCE)
 
 juce_add_plugin(BrowserVST
@@ -14,6 +15,8 @@ juce_add_plugin(BrowserVST
     FORMATS VST3 AU
     PRODUCT_NAME "Browser VST"
 )
+
+juce_generate_juce_header(BrowserVST)
 
 target_sources(BrowserVST
     PRIVATE
