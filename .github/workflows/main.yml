@@ -10,8 +10,12 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Clone JUCE
-      run: git clone --depth 1 https://github.com/juce-modules/JUCE.git JUCE
+    - name: Fetch JUCE
+      uses: actions/checkout@v4
+      with:
+        repository: juce-modules/JUCE
+        path: JUCE
+        ref: master
 
     - name: Configure CMake
       run: cmake -B build -DCMAKE_BUILD_TYPE=Release
