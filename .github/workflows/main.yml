@@ -13,7 +13,7 @@ jobs:
     - name: Fetch JUCE
       uses: actions/checkout@v4
       with:
-        repository: juce-modules/JUCE
+        repository: juce-framework/JUCE
         path: JUCE
         ref: master
 
