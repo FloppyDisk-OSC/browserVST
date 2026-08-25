@@ -9,8 +9,9 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
-      with:
-        submodules: recursive
+
+    - name: Clone JUCE
+      run: git clone --depth 1 https://github.com/juce-modules/JUCE.git JUCE
 
     - name: Configure CMake
       run: cmake -B build -DCMAKE_BUILD_TYPE=Release
