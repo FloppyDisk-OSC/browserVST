@@ -5,7 +5,6 @@ BrowserVSTAudioProcessorEditor::BrowserVSTAudioProcessorEditor (BrowserVSTAudioP
     : AudioProcessorEditor (&p)
 {
     webView.goToURL("https://penguinmod.com");
-    
     addAndMakeVisible(webView);
     setSize (800, 600);
 }
